@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jose y Lita</title>
+<script>
+  // Hora local del visitante (0-23)
+  var hora = new Date().getHours();
+
+  // De 8:00 a 11:59 -> Desayunos. Resto del día -> Carta.
+  if (hora >= 8 && hora < 12) {
+    window.location.replace("desayunos.html");
+  } else {
+    window.location.replace("carta.html");
+  }
+</script>
+</head>
+<body>
+  <!-- Por si el navegador tiene JavaScript desactivado -->
+  <noscript>
+    <p>Por favor, visita directamente:</p>
+    <p><a href="desayunos.html">Desayunos</a> · <a href="carta.html">Carta</a></p>
+  </noscript>
+</body>
+</html>
